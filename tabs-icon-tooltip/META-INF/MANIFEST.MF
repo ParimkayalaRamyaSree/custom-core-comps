@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Content-Package-Id: my_packages:tabs-icon-tooltip-pkg
+Content-Package-Roots: /apps/core/wcm/components/commons/editor/dialog/c
+ hildreneditor,/apps/core/wcm/components/tabs/v1/tabs/tabs.html
+Content-Package-Type: application
+

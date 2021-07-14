@@ -1,0 +1,44 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2018 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+
+<sly data-sly-template.tabIcon="${@ item}">
+
+	<div class="coral-Form-fieldwrapper"><label class="coral-Form-fieldlabel">Icon</label>
+	<foundation-autocomplete class="coral-Form-field" name="./${item.name}/imageURL" 
+    	pickersrc="/mnt/overlay/granite/ui/content/coral/foundation/form/pathfield/picker.html?_charset_=utf-8&amp;path={value}&amp;root=%2fcontent%2fdam&amp;filter=hierarchyNotFile&amp;selectionCount=single" role="combobox">
+        <div class="foundation-autocomplete-inputgroupwrapper">
+            <div class="coral-InputGroup">
+                <input is="coral-textfield" class="coral3-Textfield coral-InputGroup-input" autocomplete="off">
+                <span class="coral-InputGroup-button">
+                    <button is="coral-button" class="coral3-Button coral3-Button--secondary" size="M" variant="secondary" title="Open Selection Dialog" type="button" aria-label="Open Selection Dialog">
+                        <coral-icon class="coral3-Icon coral3-Icon--sizeS coral3-Icon--select" icon="select" size="S" role="img" aria-label="select">
+                        </coral-icon><coral-button-label></coral-button-label>
+                    </button></span>
+             </div>
+        </div>
+        <coral-overlay foundation-autocomplete-suggestion="" class="foundation-picker-buttonlist coral3-Overlay" data-foundation-picker-buttonlist-src="/mnt/overlay/granite/ui/content/coral/foundation/form/pathfield/suggestion{.offset,limit}.html?_charset_=utf-8&amp;root=%2fcontent%2fdam%2fconsumer-marketing&amp;filter=hierarchyNotFile{&amp;query}" style="display: none;"></coral-overlay>
+        <coral-taglist foundation-autocomplete-value="" name="./${item.name}/imageURL" class="coral3-TagList" aria-disabled="false" role="listbox" aria-live="off" aria-atomic="false" aria-relevant="additions" aria-readonly="false" aria-invalid="false" aria-required="false">
+        <coral-tag value="${item.imageURL}" tabindex="0" data-cmp-hook-childreneditor="itemTabIcon" class="cmp-childreneditor__item-tabicon coral3-Tag coral3-Tag--large " trackingelement="" role="option" aria-selected="false">
+            <button is="coral-button" class="coral3-Button coral3-Button--minimal coral3-Tag-removeButton" size="M" variant="minimal" tracking="off" handle="button" type="button" icon="close" iconsize="XS" title="Remove" tabindex="-1" coral-close="">
+                <coral-icon class="coral3-Icon coral3-Icon--close coral3-Icon--sizeXS" icon="close" size="XS" role="img" aria-label="close"></coral-icon><coral-button-label></coral-button-label>
+            </button><coral-tag-label>${item.imageURL}</coral-tag-label><input handle="input" type="hidden" name="./${item.name}/imageURL" value="${item.imageURL}">
+        </coral-tag>
+        
+        <object aria-hidden="true" tabindex="-1" style="display:block; position:absolute; top:0; left:0; height:100%; width:100%; opacity:0; overflow:hidden; z-index:-100;" type="text/html" data="about:blank">&ZeroWidthSpace;</object></coral-taglist>
+            <input class="foundation-field-related" type="hidden" name="./${item.name}/imageURL@Delete">
+    </foundation-autocomplete>
+	</div>
+</sly>
