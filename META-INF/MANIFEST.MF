@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Content-Package-Id: my_packages:custom-teaser
+Content-Package-Roots: /apps/wknd/components/teaser
+Content-Package-Type: application
+
